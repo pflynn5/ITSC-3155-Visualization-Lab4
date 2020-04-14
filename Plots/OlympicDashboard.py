@@ -34,28 +34,28 @@ app.layout = html.Div(children=[
             }
             ),
     html.Div('Web dashboard for Data Visualization using Python', style={'textAlign': 'center'}),
-    html.Div('Coronavirus COVID-19 Global Cases -  1/22/2020 to 3/17/2020', style={'textAlign': 'center'}),
+    html.Div('Olympic Games 2016- Medals by Country', style={'textAlign': 'center'}),
     html.Br(),
     html.Br(),
     html.Hr(style={'color': '#7FDBFF'}),
     html.H3('Bar chart', style={'color': '#df1e56'}),
-    html.Div('This bar chart represent the number of confirmed cases in the first 20 states of the US.'),
+    html.Div('This bar chart represent the number of gold medals won by the top 20 countries.'),
     dcc.Graph(id='graph2',
               figure={
                   'data': data_barchart,
-                  'layout': go.Layout(title='Corona Virus Confirmed Cases in The US',
-                                      xaxis={'title': 'States'}, yaxis={'title': 'Number of confirmed cases'})
+                  'layout': go.Layout(title='Gold Medals Won',
+                                      xaxis={'title': 'Countries'}, yaxis={'title': 'Number of medals won'})
               }
               ),
     html.Hr(style={'color': '#7FDBFF'}),
     html.H3('Stack bar chart', style={'color': '#df1e56'}),
     html.Div(
-        'This stack bar chart represent the CoronaVirus deaths, recovered and under treatment of all reported first 20 countries except China.'),
+        'This stack bar chart represent the number of gold, silver, and bronze medals won by the top 20 countries.'),
     dcc.Graph(id='graph3',
               figure={
                   'data': data_stackbarchart,
-                  'layout': go.Layout(title='Corona Virus Cases in the first 20 country expect China',
-                                      xaxis={'title': 'Country'}, yaxis={'title': 'Number of cases'},
+                  'layout': go.Layout(title='Medals won in the top 20 countries',
+                                      xaxis={'title': 'Country'}, yaxis={'title': 'Medals won'},
                                       barmode='stack')
               }
               ),
